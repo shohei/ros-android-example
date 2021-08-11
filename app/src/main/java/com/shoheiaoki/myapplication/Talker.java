@@ -36,8 +36,10 @@ class Talker extends AbstractNodeMain {
             @Override
             protected void loop() throws InterruptedException {
                 std_msgs.String str = publisher.newMessage();
-                str.setData(randomCommand);
-                Log.e("sent: ",randomCommand);
+                Long time= System.currentTimeMillis();
+//                str.setData(randomCommand);
+                str.setData(time.toString());
+                Log.e("sent: ",time.toString());
                 publisher.publish(str);
                 Thread.sleep(1000);
             }

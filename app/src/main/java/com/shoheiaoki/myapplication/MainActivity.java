@@ -40,7 +40,7 @@ public class MainActivity extends RosActivity {
     public void startMasterChooser() {
         URI uri;
         try {
-            uri = new URI("http://192.168.1.246:11311/");
+            uri = new URI("http://192.168.1.106:11311/");
         } catch (URISyntaxException e) {
             throw new RosRuntimeException(e);
         }
